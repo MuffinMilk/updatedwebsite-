@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Square Clicker</title>
+    <style>
+        body {
+            margin: 0;
+            background: #111;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #game-container {
+            text-align: center;
+        }
+        #target {
+            width: 100px;
+            height: 100px;
+            background: #6366f1;
+            border-radius: 12px;
+            cursor: pointer;
+            margin: 20px auto;
+            transition: transform 0.1s, background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+        }
+        #target:active {
+            transform: scale(0.9);
+        }
+        .stats {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .instructions {
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div class="stats">Score: <span id="score">0</span></div>
+        <div class="stats">Level: <span id="level">1</span></div>
+        <div id="target">CLICK ME</div>
+        <p class="instructions">Click the square to earn points!</p>
+    </div>
+
+    <script>
+        let score = 0;
+        let level = 1;
+        const scoreEl = document.getElementById('score');
+        const levelEl = document.getElementById('level');
+        const target = document.getElementById('target');
+
+        target.addEventListener('click', () => {
+            score++;
+            scoreEl.textContent = score;
+
+            // Level up every 10 clicks
+            if (score % 10 === 0) {
+                level++;
+                levelEl.textContent = level;
+                target.style.background = `hsl(${Math.random() * 360}, 70%, 60%)`;
+                target.style.transform = 'scale(1.2)';
+                setTimeout(() => target.style.transform = 'scale(1)', 100);
+            }
+        });
+    </script>
+</body>
+</html>
