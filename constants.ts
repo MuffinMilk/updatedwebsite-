@@ -8,5 +8,13 @@ export const GAMES: Game[] = [
     thumbnail: 'https://lh7-rt.googleusercontent.com/sitesz/AClOY7pQLyirzt9GNgiYOjmtW0MHkfStvc_Cs7gpoagRYRR7mScNPFUgNW69nKAy1E6zywSxt_VqIsz9G1wAHLJFj1ZDVTPL_eDjTeJ10v6W-nhwcFJNZzUPFsQugbI7-vaFRERK7aVZz6y36M2kUiQBu6_iyRbr8SslJC924SIN5VUrIaWlPh2J-MhaYcaRkgY7?key=eYcTSiUxxYTj4FbLqnO6Cg',
     category: GameCategory.ACTION,
     url: 'fnf.html'
+  },
+  {
+    id: 'square-clicker',
+    title: "Square Clicker",
+    description: "A simple yet addictive clicker game. Click the square, earn points, level up, and watch the colors change! Created just for you.",
+    thumbnail: 'https://placehold.co/600x400/6366f1/ffffff?text=Clicker',
+    category: GameCategory.ARCADE,
+    url: 'clicker-game.html'
   }
 ];
