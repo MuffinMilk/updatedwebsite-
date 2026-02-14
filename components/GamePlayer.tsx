@@ -45,7 +45,7 @@ const GamePlayer: React.FC<GamePlayerProps> = ({ game, onBack }) => {
           className="w-full h-full"
           title={game.title}
           frameBorder="0"
-          allow="autoplay; encrypted-media; fullscreen; focus-without-user-activation"
+          allow="autoplay; encrypted-media; fullscreen; focus-without-user-activation; gamepad"
           allowFullScreen
         ></iframe>
       </div>
